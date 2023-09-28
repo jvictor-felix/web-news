@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouricuri News</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <script type="module"src="./js/main.js" defer></script>
+    <script src="./js/nav.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Ouricuri News</h1>
+        <nav class="pc">
+            <ul>
+                <li class="one selecionado" onclick="teste2('selecionado', '.one', '.two', '.three'),
+                teste2('visible', '#principais', '#todas', '#avaliar')">
+                    <figure>
+                        <img class="icons" src="icons/icons8-para-você-24.png">
+                    </figure>
+                    <span>Principais</span>
+                </li>
+                <li class="two" onclick="teste2('selecionado', '.two', '.one', '.three'),
+                teste2('visible', '#todas', '#principais', '#avaliar')">
+                    <figure >
+                        <img class="icons" src="icons/icons8-notícias-32.png">
+                    </figure>
+                    <span>Todas</span>
+                </li>
+                <li class="three"onclick="teste2('selecionado', '.three', '.two', '.one'),
+                teste2('visible', '#avaliar', '#todas', '#principais')">
+                    <figure >
+                        <img class="icons" src="icons/icons8-pixel-star-32.png">
+                    </figure>
+                    <span>Avaliar</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="principais" class="container visible">
+        <section class="conteudo">
+            <figure>
+                <img src="imgs/festival.webp">
+                <figcaption>
+                    <h6>Festival Rio Ouricuri faz seleção de bandas para o evento.
+                    </h6>
+                    <div>
+                        <span class="fonte">
+                            <b>Fonte:</b>
+                            <a href="https://dol.com.br/entretenimento/cultura/828516/festival-rio-ouricuri-faz-selecao-de-bandas-para-o-evento?d=1">
+                             DOL</a>
+                        </span>
+                        <span class="data">
+                             20/10/2004
+                        </span>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="conteudo">
+            <figure>
+                <img src="imgs/prf.jpeg">
+                <figcaption>
+                    <h6>Procurado por ameaça em Alagoas é detido pela PRF em Ouricuri.</h6>
+                    <div>    
+                        <span class="fonte">
+                            <b>Fonte:</b>
+                            <a href="https://www.gov.br/prf/pt-br/noticias/estaduais/pernambuco/2023/setembro/procurado-por-ameaca-em-alagoas-e-detido-pela-prf-em-ouricuri">
+                            GOV</a>
+                        </span>
+                        <span class="data">
+                            03/04/2050
+                        </span>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="conteudo">
+            <figure>
+                <img src="imgs/carteira.jpg">
+                <figcaption>
+                    <h6>Novo Atacarejo está com 300 vagas de emprego abertas em Ouricuri.</h6>
+                    <div>
+                        <span class="fonte">
+                            <b>Fonte:</b>
+                            <a href="https://www.blogdorobertoararipina.com.br/novo-atacarejo-esta-com-300-vagas-de-emprego-abertas-em-ouricuri/">
+                            Blog do Roberto</a>
+                        </span>
+                        <span class="data">
+                            20/10/2024
+                        </span>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="conteudo">
+            <figure>
+                <img src="imgs/maternidade.jpeg">
+                <figcaption>
+                    <h6>Raquel Lyra anuncia construção de maternidade em Ouricuri, no Sertão do Araripe.</h6>
+                    <div>
+                        <span class="fonte">
+                            <b>Fonte:</b>
+                            <a href="https://www.folhape.com.br/noticias/raquel-lyra-anuncia-construcao-de-maternidade-em-ouricuri-no-sertao/289831/"> 
+                            Folha de Pernambuco</a>
+                        </span>
+                        <span class="data">
+                            20/12/2003
+                        </span>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="conteudo">
+            <figure>
+                <img src="imgs/prefeito.webp">
+                <figcaption>
+                    <h6>É falso que prefeito de Ouricuri, em Pernambuco, tenha sido pego com R$ 70 milhões.</h6>
+                    <div>
+                    <span class="fonte">
+                        <b>Fonte:</b>
+                        <a href="https://www.terra.com.br/noticias/checamos/e-falso-que-prefeito-de-ouricuri-em-pernambuco-tenha-sido-pego-com-r-70-milhoes,c2a527575acaf196fee37a91b7caa60f6glp4wjr.html">
+                         Terra</a>
+                    </span>
+                    <span class="data">
+                        20/03/2025
+                    </span>
+                </figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <div id="todas" class="container">
+
+        <div id="page1" class="noticias visible">
+            <form id="pesquisa"class="barra">
+                <input id="barra-pesquisa" type="text" placeholder="Pesquisar">
+                <button onclick="teste('visible', '#page2', '#page1')">
+                    <img src="icons/lupa.png">
+                </button>
+            </form>
+            <div id="news">
+
+            </div>
+        </div>
+
+        <div id="page2" class="noticias">
+            <div id="botao-voltar" class="barra">
+                <button id="voltar" onclick="teste('visible','#page1', '#page2')">
+                    <figure>
+                        <img src="icons/download.png">
+                    </figure>
+                </button>
+            </div>
+            <div id="vazio" class="hidden"><span> Nada encontrado!! </span></div>
+            <div id="news-pesquisa">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="avaliar" class="container">
+        <div class="ajustar">
+            <form id="avaliacao">
+                <label for="nome">Nome:</label>
+                <input autocomplete="off" type="text" id="nome" placeholder="Digite seu nome">
+
+                <label>Classifique o site em:</label>
+                <select form="#avalicao" id="classificacao">
+                    <option value="RUIM">Ruim</option>
+                    <option value="DAPARAMELHORAR">Dá para melhorar</option>
+                    <option value="BOM">Bom</option>
+                    <option value="EXCELENTE">Excelente</option>
+                </select>
+
+                <label for="comentario">Deixe seu comentário<span style="color: #696969">(opcional):</span></label>
+                <textarea id="comentario" placeholder="Digite aqui"></textarea>
+                <div class="botao">
+                    <button id="enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <nav class="mobile">
+        <ul>
+            <li class="m-one selecionado" onclick="teste2('selecionado', '.m-one', '.m-two', '.m-three'),
+            teste2('visible', '#principais', '#todas', '#avaliar')">
+                <figure>
+                    <img class="icons" src="icons/icons8-para-você-24.png">
+                </figure>
+                <span>Principais</span>
+            </li>
+            <li class="m-two" onclick="teste2('selecionado', '.m-two', '.m-one', '.m-three'),
+            teste2('visible', '#todas', '#principais', '#avaliar')">
+                <figure >
+                    <img class="icons" src="icons/icons8-notícias-32.png">
+                </figure>
+                <span>Todas</span>
+            </li>
+            <li class="m-three"onclick="teste2('selecionado', '.m-three', '.m-two', '.m-one'),
+            teste2('visible', '#avaliar', '#todas', '#principais')">
+                <figure >
+                    <img class="icons" src="icons/icons8-pixel-star-32.png">
+                </figure>
+                <span>Avaliar</span>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

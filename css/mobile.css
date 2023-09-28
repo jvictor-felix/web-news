@@ -1,0 +1,235 @@
+@media(max-width: 1000px){
+    
+
+
+    header h1{
+        width: 100%;
+    }
+
+    .pc{
+        display: none;
+    }
+
+    
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .container{
+        padding-top: 67px;
+        padding-bottom: 74px;
+        overflow: hidden;
+    }
+
+
+    .mobile{
+        display: block;
+        background-color: white;
+        height: 64px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        height: 54px;
+        align-items: center;
+        margin: 0;
+    }
+    
+    nav ul li{
+        font-size: 1.8rem;
+        width: 33.3%;
+        text-align: center;
+        min-width: 53px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    
+
+    .icons{
+        width: 24px;
+        height: 24px;
+    }
+
+    .selecionado span{
+        text-shadow: black 0.1px 0.1px;
+        transition: none;
+        transform: none;
+        font-weight: normal;
+    }
+
+
+    .selecionado figure{
+        background-color: #6495ED;
+        color: black;
+        transition: ease-in-out;
+        transform: scale(1.05);
+    }
+
+    nav ul li:hover{
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+
+    nav ul li figure{
+        width: 74px;
+        margin: 0 auto;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li span{
+        font-size: 1.8rem;
+    }
+
+    
+
+    #principais section{
+        margin-bottom: 10px;
+    }
+
+    #principais .conteudo figure{
+        max-width: 500px;
+        padding-bottom: 5px;
+    }
+
+    #principais .conteudo img{
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #principais .conteudo figcaption{
+
+        padding: 0 10px 0 10px;
+        text-align: justify;
+        height: 52.5px;
+        overflow: hidden;
+    }
+
+    #principais span{
+        font-size: 1.6rem;
+    }
+
+    #principais h6{
+        font-size: 1.6rem;
+        overflow: hidden;
+        height: 35px;
+        text-align: justify;
+    }
+
+
+
+    #barra-pesquisa{
+        font-size: 1.6rem;
+    }
+    
+    .barra {
+        max-width: 500px;
+    }
+
+    #voltar{
+        height: 38px;
+    }
+
+    td .conteudo{
+        padding: 0;
+    }
+
+    #todas h6{
+        text-align: justify;
+        height: 72px;
+        font-size: 1.6rem;
+        overflow: hidden;
+    }
+
+    .fonte{
+        font-size: 1.2rem;
+    }
+
+    .data{
+        font-size: 1.2rem;
+    }
+
+    .div-news span{
+        height: 12px;
+    }
+
+    .div-news figure{
+        width: 100%;
+        max-width: 490px;
+        margin-bottom: 5px;
+        padding: 5px 5px;
+    }
+
+    .div-news img{
+        height: 100px;
+
+        width: 125px;
+
+        background-color: black;
+        border-radius: 10px;
+    }
+
+    .fonte{
+        overflow: hidden;
+    }
+
+    .div-news div{
+        height: 24;
+        flex-direction: column;
+    }
+
+    .div-news figcaption{
+        height: 80px;
+        padding: 3px;
+    }
+
+    .ajustar{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #avaliacao{
+        margin-top: 67px;
+        margin-bottom: 74px;
+    }
+
+   
+
+    #nome, #classificacao, #comentario{
+        font-size: 1.6rem;
+    }
+
+    #enviar{
+        font-size: 1.6rem;
+        
+    }
+
+    
+   @keyframes slide{
+
+    from{
+        margin-left: 90%;
+    }
+
+    to{
+        margin-left: 0%;
+    }
+   }
+
+}

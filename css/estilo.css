@@ -1,0 +1,400 @@
+body{
+    background-color: #F0F8FF;
+}
+
+header{
+    background-color: white;
+    height: 46px;
+    padding: 5px;
+    font-size: 18px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #dcdcdc;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+header h1{
+    height: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 4.0rem;
+    font-family: fantasy;
+    justify-content: left;
+    align-items: center;
+}
+
+.mobile{
+    display: none;
+}
+
+.pc{
+    display: block;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    margin-right: 10px;
+    align-items: end;
+    cursor: default
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav ul li{
+    width: 120px;
+    text-align: center;
+    font-size: 2.0rem;
+    padding: 5px 0;
+
+}
+
+
+nav ul li span{
+    padding: 5px;
+}
+
+.selecionado span{
+    color: #000;
+    transition: ease-in-out;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+
+
+nav ul li figure{
+    display: none;
+}
+
+
+.container{
+    display: none;
+    font-size: 1.8rem;
+    padding-top: 82px;
+    overflow: hidden;
+    animation-name: slide;
+    animation-duration: 0.5s;
+    padding-bottom: 25px;
+}
+
+@keyframes slide{
+
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+
+#principais section{
+    margin-bottom: 25px;
+}
+
+#principais section:last-child{
+    margin-bottom: 0px;
+}
+
+figcaption div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.data{
+    color: #696969;
+   
+}
+
+.fonte{
+    color: #696969;
+}
+
+
+#principais .conteudo figure{
+    width: 95%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #dcdcdc;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 800px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+#principais .conteudo img{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+#principais .conteudo figcaption{
+    padding: 0 10px 0 10px;
+    text-align: justify;
+    height: 80.5px;
+    overflow: hidden;
+}
+
+#principais h6{
+    font-size: 2.5rem;
+    overflow: hidden;
+    height: 64px;
+    text-align: justify;
+    font-weight: normal;
+}
+
+b{
+    font-weight: normal;
+}
+
+.noticias{
+    animation-name: slide;
+    animation-duration: 0.6s;
+}
+
+#barra-pesquisa{
+    height: 40px;
+    padding: 0 10px;
+    width: 95%;
+    border-style: solid;
+    border-width: 0.2px;
+    border-radius: 10px 0 0 10px;
+    border-right-style: none;
+    border-color: #dcdcdc;
+    font-size: 1.8rem;
+}
+
+.barra {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.barra button{
+    z-index: 1px;
+    width: 50px;
+    height: 42px;
+    padding: 0;
+    border-radius: 0px 10px 10px 0;
+    border-style: solid;
+    border-width: 0.2px;
+    border-color: #dcdcdc;
+    text-align: center;
+}
+
+.barra button:hover{
+    cursor: pointer;
+}
+
+.barra button img{
+    height: 24px;
+    width: 24px;
+    margin: auto;
+}
+
+#barra-pesquisa:focus{
+    outline-style: none;
+}
+
+#barra-pesquisa:focus::placeholder {
+    color: transparent;
+}
+
+#barra-pesquisa::placeholder{
+    text-align: center;
+}
+
+#page2 .barra{
+    justify-content: flex-start;
+
+}
+
+#voltar{
+    height: 40px;
+    padding: 0;
+    border-radius: 10px;
+    width: 100px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: #dcdcdc;
+    border-width: 0.01px;
+}
+
+#voltar img{
+    width: 24px;
+    height: 24px;
+}
+
+
+#voltar:hover{
+    transform: scale(1.1);
+}
+
+
+#todas h6{
+    text-align: justify;
+    height: 95px;
+    font-size: 2.8rem;
+    font-weight: normal;
+}
+
+#todas figure:hover h6{
+    text-decoration: underline;
+}
+
+.div-news{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.div-news figure{
+    width: 100%;
+    border-style: solid;
+    max-width: 990px;
+    border-width: 0.5px;
+    border-color: #dcdcdc;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
+
+.div-news img{
+    height: 125px;
+    height: 125px;
+
+    background-color: black;
+    border-radius: 10px;
+}
+
+.div-news div{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.div-news figcaption{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.conteudo span textarea{
+    text-align: center;
+}
+
+#vazio{
+    width: 100%;
+    max-width: 1000;
+    text-align: center;
+    font-size: 2.0rem;
+    margin: 0 auto;
+    height: 46px;
+}
+
+
+
+#avaliar{
+    height: 100vh !important;
+    padding: 0 10px;
+}
+
+
+#avaliar .ajustar{
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25;
+
+}
+
+#avaliacao{
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #dcdcdc;
+    border-radius: 5px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    max-width: 1000px;
+    margin: 82px auto 25px auto;
+}
+
+#avaliacao .botao{
+    width: 100%;
+    text-align: center;
+}
+
+#avaliacao label{
+    font-weight: initial;
+    font-size: 2..0rem;
+}
+
+#nome:focus::placeholder, #comentario:focus::placeholder{
+    color: transparent;
+}
+
+#nome, #classificacao, #comentario{
+    height: 42px;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #696969;
+    border-style: solid;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+#comentario{
+    height: 80px;
+    padding-top: 10px;
+}
+
+#enviar{
+    width: 100px;
+    height: 38px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #dcdcdc;
+    border-color: #696969;
+    font-size: 1.8rem;
+        
+}
+
+
+
+.hidden{
+    display: none;
+}
+
