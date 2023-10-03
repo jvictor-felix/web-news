@@ -178,8 +178,10 @@
 
     .div-news img{
         height: 100px;
+        min-height: 100px;
 
         width: 125px;
+        min-width: 100px;
 
         background-color: black;
         border-radius: 10px;

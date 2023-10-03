@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
-    <script type="module"src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <script src="./js/nav.js" defer></script>
 
 </head>
@@ -165,7 +165,11 @@
 
 
     <div id="avaliar" class="container">
+        <div class="resposta">
+
+        </div>
         <div class="ajustar">
+           
             <form id="avaliacao">
                 <label for="nome">Nome:</label>
                 <input autocomplete="off" type="text" id="nome" placeholder="Digite seu nome">
@@ -174,7 +178,7 @@
                 <select form="#avalicao" id="classificacao">
                     <option value="RUIM">Ruim</option>
                     <option value="DAPARAMELHORAR">Dá para melhorar</option>
-                    <option value="BOM">Bom</option>
+                    <option value="BOM" selected>Bom</option>
                     <option value="EXCELENTE">Excelente</option>
                 </select>
 
@@ -183,6 +187,8 @@
                 <div class="botao">
                     <button id="enviar">Enviar</button>
                 </div>
+                
+                
             </form>
         </div>
     </div>

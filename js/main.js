@@ -4,6 +4,10 @@ var vazio = document.getElementById("vazio");
 const form_pesquisa = document.getElementById("pesquisa");
 const form_avaliar = document.getElementById("avaliacao");
 const voltar = document.getElementById("voltar");
+const Inome = document.getElementById("nome");
+const Inota = document.getElementById("classificacao");
+const Icomentario = document.getElementById("comentario");
+
 var data = new Date();
 
 function main(){
@@ -23,10 +27,6 @@ function main(){
 }
 
 main();
-
-
-console.log(data);
-
 
 function limpar(input){
     input.value = "";
@@ -49,36 +49,14 @@ form_pesquisa.addEventListener('submit', (e)=>{
 
 });
 
-function fazAvaliacao(nome, classificacao, comentario, data){
-    fetch("http://localhost:8080/apisms/insert", {
-        headers:{
-            "Accpet": "application/json",
-            "Content-Type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify({
-            nome: nome,
-            comentario: comentario,
-            data_msg: data
-        })
-    }).then(function (res) {
-        console.log(res);
-    }).catch(function(res){
-        console.log(res);
-    });
-}
 
 form_avaliar.addEventListener('submit', (e)=>{
     
     e.preventDefault();
 
-    let Inome = document.getElementById("nome");
-    let Inota = document.getElementById("classificacao");
-    let Icomentario = document.getElementById("comentario");
-
-
-    fazAvaliacao(Inome, Icomentario, data);
+    api.fazAvaliacao(Inome.value, Inota.options[Inota.selectedIndex].value, Icomentario.value, data);
 
     limpar(nome);
     limpar(comentario)
 })
+

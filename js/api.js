@@ -79,3 +79,56 @@ export function removeLinhas(){
         tabela.removeChild(tabela.firstChild);
     }
 }
+
+export function fazAvaliacao(nome, classificacao, comentario, data){
+    fetch("http://localhost:8080/apisms/insert", {
+        headers:{
+            "Accpet": "application/json",
+            "Content-Type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            nome: nome,
+            classificacao: classificacao,
+            comentario: comentario,
+            data_msg: data
+        })
+    }).then(function(response){ 
+        if(response.status == 400){
+            response.json().then(function(data){
+            console.log(data);
+            let nome = document.querySelector("#nome");
+            let span = document.createElement("span");
+            
+            let resposta = document.querySelector(".resposta");
+            resposta.classList.add("visible");
+            resposta.classList.add("erro");
+            nome.classList.add("erro-border");
+            span.innerHTML = data.nome;
+            resposta.appendChild(span);
+
+           
+            setTimeout(() => {
+                resposta.removeChild(span);
+                resposta.classList.remove("erro");
+                resposta.classList.remove("visible");
+            },2500);
+                
+        })}
+        else if(response.status == 200){
+            let span = document.createElement("span");
+            span.innerHTML = "Avaliacão enviada com sucesso, obrigado(a)!"
+            let resposta = document.querySelector(".resposta");
+            resposta.appendChild(span);
+            resposta.classList.add("visible");
+            setTimeout(() => {
+                resposta.removeChild(span);
+                resposta.classList.remove("visible");
+            },2500);
+
+        }
+    })
+    .catch(function(response){
+        console.log(response)
+    });
+}
